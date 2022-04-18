@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
+char *
 int _printf(const char *format, ...)
 {
 int size = 0;
@@ -28,6 +28,6 @@ if (size < 0)
 free(p);
 return NULL;
 }
-return (write(1, format, 1));
+return (p);
 };
 
