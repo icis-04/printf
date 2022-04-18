@@ -29,5 +29,6 @@ if (size < 0)
 free(p);
 return NULL;
 }
+return (write(1, format, 1));
 };
 
