@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ifndef MAIN_H
 #define MAIN_H
 
@@ -33,5 +34,9 @@ int print_rot13(va_list args, int len);
 int print_b(va_list args, int len);
 int print_binary(unsigned int, int);
 int print_Str(va_list args, int len);
+=======
+#include <stdarg.h>
+int _printf(const char *format, ...);
+>>>>>>> fa9939a94f23c91985ca63efaef323c6fefe5528
 
 #endif
