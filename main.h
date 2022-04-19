@@ -1,42 +1,30 @@
-<<<<<<< HEAD
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef main_H
+#define main_H
 
 #include <stdarg.h>
-#include <stdlib.h>
-
-/**
-  *struct directives - holds fromat specifiers and their functions.
-  *@spec: char.
-  *@fspec: function pointer.
-  *
-  */
-typedef struct directives
-{
-	char spec;
-	int (*fspec)(va_list, int);
-} forms;
-
 int _putchar(char c);
 int _printf(const char *format, ...);
-int (*get_print_func(char c))(va_list, int);
-int print_ch(va_list, int);
-int print_str(va_list, int);
-int print_int(va_list, int);
-int _putchar_int(int, int);
-int print_numbers(unsigned long n, unsigned int base, const char *digits);
-unsigned int find_length(unsigned int, int);
-int print_hex(va_list args, int len);
-int print_heX(va_list args, int len);
-int print_unsignd(va_list args, int len);
-int print_octal(va_list args, int len);
-int print_rot13(va_list args, int len);
-int print_b(va_list args, int len);
-int print_binary(unsigned int, int);
-int print_Str(va_list args, int len);
-=======
-#include <stdarg.h>
-int _printf(const char *format, ...);
->>>>>>> fa9939a94f23c91985ca63efaef323c6fefe5528
+int print_char(va_list c);
+int print_string(va_list s);
+int print_int(va_list i);
+int print_dec(va_list d);
+int print_rev(va_list r);
+int print_bin(va_list b);
+int print_unsig(va_list u);
+int print_octal(va_list o);
+int print_x(va_list x);
+int print_X(va_list X);
+int print_rot13(va_list R);
+/**
+  * struct code_format - Struct format
+  *
+  * @sc: The specifiers
+  * @f: The function associated
+  */
+typedef struct code_format
+{
+	char *sc;
+	int (*f)(va_list);
+} code_f;
 
-#endif
+#endif /* main_H */
